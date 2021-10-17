@@ -21,6 +21,9 @@ namespace Generic_Maximum
             double maxDouble = MaximumFloat(FirstValue,SecondValue,ThirdValue);
             Console.WriteLine("Maximum Double  : " + maxDouble);
 
+            string maxString = MaximumString("OnePlus","Apple","Samsung");
+            Console.WriteLine("Maximum String Output : " + maxString);
+
 
         }
         public static int MaximumInt(int FirstValue,int SecondValue,int ThirdValue)
@@ -42,6 +45,16 @@ namespace Generic_Maximum
             if (ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(SecondValue) > 0)
                 return ThirdValue;
             return 0;
+        }
+        public static string MaximumString(string a, string b, string c)
+        {
+            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
+                return a;
+            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
+                return b;
+            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0)
+                return c;
+            return null;
         }
     }
 }
