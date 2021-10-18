@@ -7,8 +7,9 @@ namespace Generic_Maximum
         static void Main(string[] args)
         {
             int[] array = { 12,4,36,11,23,41,25 };
-            var maxVal = new GenericMax<int>(array).GetMaximumValue();
-            Console.WriteLine("Maximum value = " + maxVal);
+            GenericMax<int> generic = new GenericMax<int>(array);
+            generic.PrintMax();
+
 
            
         }

@@ -10,6 +10,7 @@ namespace Generic_Maximum
         public GenericMax(T[] array)
         {
             this.array = array;
+
         }
 
         public T[] SortValues(T[] array)
@@ -18,10 +19,16 @@ namespace Generic_Maximum
             Array.Reverse(array);
             return array;
         }
-        public T GetMaximumValue()
+        public T GetMaximumValue(T[] array)
         {
             var sortedValues = SortValues(this.array);
             return sortedValues[0];
+        }
+        public void PrintMax()
+        {
+            var max = GetMaximumValue(this.array);
+            Console.WriteLine("Maximum value is : " +max);
+            
         }
     }
 }
